@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgba(0, 0, 0, 0.9);
+    color: white; */
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.outer-div {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-text-menu {
+    color: white;
+    margin-top: 0;
+    flex: 1;
+    position: fixed;
+    left: 20px;
+    top: 40%;
+}
+
+.side-text-menu div {
+    margin-bottom: 20px;
+}
+
+.side-text-menu div a {
+    color: white;
+    padding-left: 8px;
+    border-left: 3px solid blue;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.side-text-menu div a:hover {
+    color: blue;
+    border-left: 3px solid white;
+}
+
+.text-description {
+    padding-right: 100px;
+    padding-left: 100px;
+    flex: 1;
+}
+
+.text-description div h3 {
+    color: blue;
+}
+
+.text-description div {
+    padding: 200px;
+    padding-right: 500px;
+    height: 100vh;
+}
+
+
+/* .text-des-div {
+    margin-top: 50%;
+} */
+
+.main-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex: 1;
+    position: fixed;
+    left: 60%;
+    top: 20%;
+}
+
+.main-images img {
+    border: 4px solid blue;
+    width: 450px;
+    height: 300px;
+}
+
+.arrow {
+    color: gray;
+    position: fixed;
+    top: 80%;
+    right: 100px;
+    text-decoration: none;
+    font-size: 55px;
+}

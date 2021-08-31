@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/03b0aaadec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Animated div</title>
+</head>
+
+<body>
+    <div class="outer-div">
+        <div class="inner-container side-text-menu">
+            <div>
+                <a style="opacity: 0.3;" id="link1" href="#div1"> Laptop Text</a>
+            </div>
+            <div><a style="opacity: 0.3;" id="link2" href="#div2">School Text</a></div>
+            <div>
+                <a style="opacity: 0.3;" id="link3" href="#div3"> Library Text</a>
+            </div>
+            <div>
+                <a style="opacity: 0.3;" id="link4" href="#div4">Laboratory Text</a>
+            </div>
+
+        </div>
+
+        <div class="inner-container text-description">
+            <div class='text-des-div' id="div1" data-aos="fade-up-right">
+                <h3>Laptop</h3>
+                <br>
+                <p> laptop computer is a small personal computer. They are designed to be more portable than traditional desktop computers, with many of the same abilities. Laptops are able to be folded flat for transportation and have a built-in keyboard
+                    and touchpad. I am Using HP Ka laptop</p>
+            </div>
+            <div class='text-des-div' id='div2' data-aos="fade-up-right">
+                <h3>School</h3>
+                <br>
+                <p>School is a place for us to learn, but most of all, school is a place for fun. We have our first love there, meet our first best friend, and have our first hair being pulled there. Whatever our past experiences at school, we hope that
+                    it is an amazing place for you as it is for us</p>
+            </div>
+            <div class='text-des-div' id='div3' data-aos="fade-up-right">
+                <h3>Library</h3>
+                <br>
+                <p>A school library or a school library media center is a library within a school where students, staff, and often, parents of a public or private school have access to a variety of resources. ... A school library serves as the center and
+                    coordinating agency for all material used in the school.</p>
+            </div>
+            <div class='text-des-div' id='div4' data-aos="fade-up-right">
+                <h3>Laboratory</h3>
+                <br>
+                <p>The definition of a science laboratory is a special facility where experiments are done and typically contains equipment, beakers, burners and other tools necessary to complete experiments.</p>
+            </div>
+        </div>
+        <div class="inner-container main-images">
+            <div><img class='img' src="./images/laptop.jpg" alt=""></div>
+
+            <div>
+                <a href="#div1" class="arrow"><i class="fab fa-arrow-up"></i></a>
+            </div>
+        </div>
+
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+        <!-- our AOS Data -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+
+        <script>
+            window.addEventListener('load', function() {
+                let ImageArray = ["./images/school.jpg", "./images/library.jpeg", "./images/laboratory.jpg"];
+                var scrollPara = document.querySelectorAll('.text-des-div');
+                var images = document.querySelector('.img');
+
+
+
+                var divOne = document.querySelector('#div1');
+                divOne.addEventListener('mouseenter', () => {
+                    images.src = "./images/laptop.jpg";
+                    var link1 = document.querySelector('#link1');
+                    link1.style.opacity = '1';
+                    link2.style.opacity = '0.3';
+                    link3.style.opacity = '0.3';
+                    link4.style.opacity = '0.3';
+
+
+                })
+
+                var divTwo = document.querySelector('#div2');
+                divTwo.addEventListener('mouseenter', () => {
+                    images.src = "./images/school.jpg";
+                    var link2 = document.querySelector('#link2');
+                    link2.style.opacity = '1';
+                    link1.style.opacity = '0.3';
+                    link3.style.opacity = '0.3';
+                    link4.style.opacity = '0.3';
+
+
+                })
+                var divThree = document.querySelector('#div3');
+                divThree.addEventListener('mouseenter', () => {
+                    images.src = "./images/library.jpeg";
+                    var link3 = document.querySelector('#link3');
+                    link3.style.opacity = '1';
+                    link1.style.opacity = '0.3';
+                    link2.style.opacity = '0.3';
+                    link4.style.opacity = '0.3';
+
+
+
+                })
+                var divFour = document.querySelector('#div4');
+                divFour.addEventListener('mouseenter', () => {
+                    images.src = "./images/laboratory.jpg";
+                    var link4 = document.querySelector('#link4');
+                    link4.style.opacity = '1';
+                    link1.style.opacity = '0.3';
+                    link2.style.opacity = '0.3';
+                    link3.style.opacity = '0.3';
+
+                })
+            })
+        </script>
+</body>
+
+</html>
